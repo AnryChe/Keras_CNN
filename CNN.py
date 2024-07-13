@@ -19,8 +19,8 @@ print('X_train shape:', X_train.shape)
 print(X_train.shape[0], 'тренировочные примеры')
 print(X_test.shape[0], 'тестовые примеры')
 
-y_train = to_categorical(y_train, num_classes)
-y_test = to_categorical(y_test, num_classes)
+y_train = np.array(to_categorical(y_train, num_classes))
+y_test = np.array(to_categorical(y_test, num_classes))
 
 X_train = X_train / 255.0
 X_test = X_test / 255.0
